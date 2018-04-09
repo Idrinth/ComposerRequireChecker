@@ -29,6 +29,7 @@ final class LocateComposerPackageSourceFiles
             $this->getFilePaths($composerData['autoload']['psr-4'] ?? [], $packageDir),
             $blacklist
         );
+        var_dump($manual, $packageDir);
         yield from $this->locateFilesInFilesInFilesDefinitions(
             $this->getFilePaths($manual, $packageDir),
             $blacklist
